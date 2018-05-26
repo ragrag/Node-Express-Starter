@@ -86,6 +86,6 @@ let users = require('./routes/users');
 app.use('/users', users);
 
 //server start
-app.listen(3000, () => {
+app.listen(strings.port, () => {
     console.log("Server Started.");
 });
