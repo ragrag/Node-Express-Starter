@@ -1,14 +1,20 @@
 extends base
+block header
+	title websiteName
 
-block content
-  h1 Register
-  form(method='POST', action='/users/login')
-    #form-group
-      label Username:
-      input.form-control(name='username', type='text')
-    #form-group
-      label Password:
-      input.form-control(name='password', type='password')     
-    br
-    input.btn.btn-primary(type='submit',value='submit')    
+block content 
+	.row(id="loginBox")
+		.col-6.offset-3
+			h1 Login
+			br
+			a.btn.btn-facebook(href="/auth/facebook")
+				i(class="fab fa-facebook-f")
+				|  | Connect with Facebook
+
+			|
+			|
+			a.btn.btn-twitter(href="/auth/twitter")
+				i(class="fab fa-twitter")
+				|  | Connect with Twitter
+
 

@@ -1,11 +1,8 @@
 
 
 module.exports =
- {
-
-    
-    database: 'mongodb://localhost:27017/snipit',
+ {    
+    database: 'mongodb://localhost:27017/unnamed',
     secret: 'yoursecret',
-    port: 3000
-
+    port: 3001
 };
