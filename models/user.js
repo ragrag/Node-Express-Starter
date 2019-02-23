@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.Types.ObjectId;
+
 
 //User Schema
 const UserSchema = mongoose.Schema({
@@ -7,18 +9,39 @@ const UserSchema = mongoose.Schema({
         required: true
     },
 
+
     email: {
         type: String,
-        required: true
+        required: false ,
+        lowercase: true
     },
     username: {
         type: String,
         required: true
     },
-    password: {
+
+    about: {
         type: String,
-        required: true
+        required:false
+    },
+
+    displayPicture: {
+        data: Buffer,
+        contentType: String 
+    },
+
+    social :{
+        provider : String,
+        id : String
+    },
+
+    isVerified: { type: Boolean, default: false },
+
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
+
 });
 
 const User = module.exports = mongoose.model('User',UserSchema);
